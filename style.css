@@ -104,6 +104,10 @@ header {
 .account li {
 	font-weight: 500;
 }
+.account button {
+	padding: .5em;
+	border-radius: 50%;
+}
 .account button svg {
 	width: 1.5em;
 }
@@ -221,11 +225,18 @@ main h2:not(:first-of-type) {
 .projects .links {
 	align-self: end;
 	display: flex;
-	gap: 1em;
+	gap: .5em;
 	justify-content: flex-end;
 	margin: 1em 0 0;
 	padding: 0;
 	list-style-type: none;
+}
+.projects .links button {
+	padding: .5em;
+	border-radius: 50%;
+}
+.projects .links svg {
+	width: 1.5em;
 }
 .other .container {
 	background-color: var(--color-bg-lighter);
@@ -253,18 +264,17 @@ main h2:not(:first-of-type) {
 	display: grid;
 	gap: 1em;
 }
-.trending li {
+.trending a {
 	display: flex;
 	gap: .6em;
 	align-items: center;
-}
-.trending img {
-	width: 3em;
-}
-.trending a {
 	font-size: .8em;
 	color: inherit;
 	text-decoration: none;
+	border-radius: 10em;
+}
+.trending img {
+	width: 3em;
 }
 .trending li b {
 	display: block;
@@ -276,6 +286,12 @@ main h2:not(:first-of-type) {
 	button {
 		cursor: pointer;
 	}
+	.account button {
+		transition: background-color .2s;
+	}
+	.account button:hover {
+		background-color: var(--color-bg-light);
+	}	
 	.sidebar a {
 		transition: background-color .2s;
 	}
@@ -287,5 +303,17 @@ main h2:not(:first-of-type) {
 	}
 	.actions button:hover {
 		background-color: var(--color-bg-dark-hover);
+	}
+	.projects .links button {
+		transition: background-color .2s;
+	}
+	.projects .links button:hover {
+		background-color: var(--color-bg-light);
+	}
+	.trending a {
+		transition: background-color .2s;
+	}
+	.trending a:hover {
+		background-color: var(--color-bg-light);
 	}
 }
